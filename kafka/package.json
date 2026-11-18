@@ -1,0 +1,23 @@
+{
+  "name": "cloudnativeorders-kafka",
+  "version": "1.0.0",
+  "description": "DSY1107 - Kafka en producción para CloudNativeOrders: escalar, replicar, retener y afinar (casos prácticos)",
+  "private": true,
+  "scripts": {
+    "up": "docker compose up -d",
+    "up:cluster": "docker compose -f docker-compose.cluster.yml up -d",
+    "down": "docker compose down && docker compose -f docker-compose.cluster.yml down",
+    "setup": "node scripts/setup.js",
+    "generar": "node scripts/generar.js",
+    "report": "node scripts/report.js",
+    "lag": "node scripts/lag.js",
+    "particiones": "node scripts/particiones.js",
+    "replicas": "node scripts/replicas.js",
+    "retencion": "node scripts/retencion.js",
+    "carga": "node scripts/carga.js",
+    "pedido-real": "node scripts/pedidoReal.js"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}
